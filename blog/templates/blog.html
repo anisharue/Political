@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Posts - Sydney White</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+	}
+        .volunteer-image {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        header a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .hover-effect {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-effect:hover {
+            opacity: 0.8;
+        }
+
+</style>
+
+
+</head>
+
+<body>
+<header class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="container">
+		{% block content%}
+		{% for post in object_list %}
+		<article class="card mb-3">
+			<div class="card-body">
+				<h2 class="card-title">{{post.title}}</h2>
+				<p class="card-text"><small class="text-muted">{{post.date|date:"F d, Y"}}</small></p>
+				<p class="card-text">{{post.content|truncatewords:30}}</p>
+				<a href="/blog/{{post.id}}" class="btn btn-primary">Read more</a>
+			</div>
+		</article>
+		{% endfor %}
+		{% endblock %}
+	</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{post.title}}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<style>
+		 .volunteer-image {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+        header a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .hover-effect {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-effect:hover {
+            opacity: 0.8;
+        }
+        .navbar-nav .nav-link {
+            font-size: 24px;
+        }
+
+
+	</style>
+
+</head>
+<body>
+<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Home</a>
+			<a class="navbar-brand" href="/blog">Back</a>
+        </nav>
+    </header>
+
+	<main class="container">
+		<article class="card">
+			<div class="card-body">
+				<h1 class="card-title">{{post.title}}</h1>
+				<h2 class="card-subtitle mb-2 text-muted">Posted on {{post.date}}</h2>
+				<hr>
+				<div class="container">
+					{{post.signature|safe|linebreaks}}
+					{{post.body|safe|linebreaks}}
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="share-buttons">
+					<!-- Add social media share buttons here -->
+				</div>
+			</div>
+		</article>
+		<div class="call-to-action">
+			<p>Join the campaign for social justice today! <a href="#" class="btn btn-primary">Share</a> <a href="#" class="btn btn-secondary">Subscribe</a></p>
+		</div>
+	</main>
+
+	<footer class="container-fluid">
+		<p>&copy; {{candidate_name}}. All rights reserved.</p>
+	</footer>
+
+</body>
+</html>
