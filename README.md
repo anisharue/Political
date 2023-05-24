@@ -8,7 +8,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Built with](#built with)
+- [Used](#used)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
 
@@ -50,7 +50,7 @@ python manage.py runserver
 ### Blog - this page contains all her blog posts about somee issues 
 ### Contact - this page her contact info and her office address 
 
-# Built With
+# Used
 ### HTML
 ### CSS
 ### Bootstrap
