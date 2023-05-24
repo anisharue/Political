@@ -9,6 +9,8 @@
 - [Usage](#usage)
 - [Features](#features)
 - [Built with](#built with)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
 
 
 # Installation 
@@ -41,7 +43,7 @@ python manage.py runserver
 ### Although to view the about you have to first register then login
 
 
-### Features 
+# Features 
 
 ### About - this page contains the story about her life 
 ### Volunteer - this page contains all about her volunteer work
@@ -54,7 +56,7 @@ python manage.py runserver
 ### Bootstrap
 ### Django(Python framework)
 
-## Credits
+# Credits
 ### This project was created by Anisha Mandega.Feel free to contribute to this project by creating a pull request or reporting an issue
 
 # Acknowledgments
